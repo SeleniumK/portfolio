@@ -7,19 +7,14 @@ function Project(features){
   this.display = function(){
     var $newproject = $('article.template').clone();
     $newproject.removeClass('template');
-
-    $newproject.data('title', this.title);
-    $newproject.data('picture', this.picture);
-    $newproject.data('link', this.link);
-
     $newproject.find('a').attr('href', this.link);
     $newproject.find('img').attr('src', this.picture);
     return $newproject;
   };
 };
 
-rawData.forEach(function(projInd) {
-  allProjects.push(new Project(projInd));
+rawData.forEach(function(data) {
+  allProjects.push(new Project(data));
 });
 
 allProjects.forEach(function(a){
