@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Selena Flannery | Developer & Designer</title>
-    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link href="styles/base.css" type="text/css" rel="stylesheet"/>
+    <link href="styles/layout.css" type="text/css" rel="stylesheet"/>
+    <link href="styles/modules.css" type="text/css" rel="stylesheet"/>
   </head>
   <body>
     <header>
       <h1>SELENA FLANNERY</h1>
-      <nav>
-        <ul>
-          <li> Projects </li>
-          <li> About </li>
-          <li> Contact </li>
+      <nav id="mainNav">
+        <ul id="mainNavOpts">
+          <li class="tab" data-content="projects"><a href="#">Projects </a</li>
+          <li class="tab" data-content="about"><a href="#">About</a></li>
         </ul>
       </nav>
     </header>
@@ -20,6 +21,13 @@
       <article class="template">
         <a href=""><img src=""/></a>
       </article>
+    </section>
+    <section id="about">
+      <div id="aboutContent">
+        <p>
+          Some stuff goes here
+        </p>
+      </div>
     </section>
     <footer>
     </footer>

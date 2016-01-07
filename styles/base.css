@@ -1,0 +1,19 @@
+img{
+  max-width: 85%;
+}
+
+h1{
+  color: #5A1B9B;
+}
+/*TEXT STYLES
+=======================================*/
+li{
+  list-style: none;
+  color: #5A1B9B;
+}
+
+/*LINK STYLES
+=======================================*/
+a, a:link, a:active{
+  text-decoration: none;
+}

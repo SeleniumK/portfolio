@@ -1,4 +1,5 @@
 var allProjects = [];
+var projectView = {};
 
 function Project(features){
   this.title = features.title;
@@ -20,4 +21,17 @@ rawData.forEach(function(data) {
 
 allProjects.forEach(function(a){
   $('#projects').append(a.toHtml());
+});
+
+projectView.handleMainNav = function(){
+  $('#mainNav').on('click', '.tab', function(e) {
+    $('section').hide();
+    $('#' + $(this).data('content')).fadeIn();
+  });
+
+  $('#mainNav .tab:first').click();
+};
+
+$(document).ready(function(){
+  projectView.handleMainNav();
 });

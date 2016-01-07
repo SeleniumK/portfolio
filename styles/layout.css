@@ -1,0 +1,12 @@
+/*2F35B2 -- blue
+5A1B9B -- purple
+8A9C62 -- green
+F8EAB7 -- yellow*/
+
+#aboutContent{
+  background-color: #8A9C62;
+}
+
+#aboutContent p{
+  background-color: rgba(255, 255, 255, .5);
+}
