@@ -7,6 +7,11 @@
     <link href="styles/layout.css" type="text/css" rel="stylesheet"/>
     <link href="styles/modules.css" type="text/css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script id="template" type="text/x-handlebars-template">
+      <article>
+        <a href="{{link}}"><img src="{{picture}}" alt="{{title}}"/></a>
+      </article>
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -20,9 +25,6 @@
         </nav>
       </header>
       <section id="projects">
-        <article class="template">
-          <a href=""><img src=""/></a>
-        </article>
       </section>
       <section id="about">
         <div>
@@ -35,6 +37,7 @@
       </footer>
     </div>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="projects.js"></script>
     <script src="script.js"></script>
   </body>
