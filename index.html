@@ -6,31 +6,34 @@
     <link href="styles/base.css" type="text/css" rel="stylesheet"/>
     <link href="styles/layout.css" type="text/css" rel="stylesheet"/>
     <link href="styles/modules.css" type="text/css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header>
-      <h1>SELENA FLANNERY</h1>
-      <nav id="mainNav">
-        <ul id="mainNavOpts">
-          <li class="tab" data-content="projects"><a href="#">Projects </a</li>
-          <li class="tab" data-content="about"><a href="#">About</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section id="projects">
-      <article class="template">
-        <a href=""><img src=""/></a>
-      </article>
-    </section>
-    <section id="about">
-      <div id="aboutContent">
-        <p>
-          Some stuff goes here
-        </p>
-      </div>
-    </section>
-    <footer>
-    </footer>
+    <div class="wrapper">
+      <header>
+        <h1>SELENA FLANNERY</h1>
+        <nav id="mainNav">
+          <ul>
+            <li class="tab" data-content="projects"><a href="#">Projects </a</li>
+            <li class="tab" data-content="about"><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section id="projects">
+        <article class="template">
+          <a href=""><img src=""/></a>
+        </article>
+      </section>
+      <section id="about">
+        <div>
+          <p>
+            Some stuff goes here
+          </p>
+        </div>
+      </section>
+      <footer>
+      </footer>
+    </div>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
     <script src="projects.js"></script>
     <script src="script.js"></script>

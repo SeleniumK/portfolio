@@ -1,15 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #4D29B2;
+  text-align: center;
+}
+
+.wrapper{
+  background-color: white;
+}
+
+.template{
+  display: none;
+}
 img{
-  max-width: 85%;
+  max-width: 100%;
 }
 
 h1{
-  color: #5A1B9B;
+  color: #4D29B2;
+  text-align: center;
 }
 /*TEXT STYLES
 =======================================*/
 li{
   list-style: none;
-  color: #5A1B9B;
+  color: #4D29B2;
 }
 
 /*LINK STYLES

@@ -1,18 +1,7 @@
+
+
 /*NavBar
 ==============*/
-#mainNavOpts{
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
-  margin: 1% 5% 1% 5%;
-}
-
-li{
-  margin: 3%;
-}
 
 /*Projects
 ===================*/
-article img{
-  width: 40%;
-}
