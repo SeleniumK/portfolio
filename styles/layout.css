@@ -1,12 +1,7 @@
 .wrapper{
-  position: absolute;
-  top: 3%;
-  right: 0;
-  bottom: 0;
-  left: .5%;
-  margin-bottom: 0;
+  position: relative;
+  padding-bottom: 5%;
 }
-
 header, section, article, ul{
   display: flex;
   justify-content: center;
@@ -31,7 +26,8 @@ li{
 }
 
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 700px),
+      (orientation: landscape) {
 
   header{
     flex-direction: row;
@@ -41,9 +37,9 @@ li{
 
   section{
     margin: 5% 12%;
-    display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
     flex-wrap: wrap;
   }
   article{
@@ -60,7 +56,6 @@ li{
     justify-content: flex-end;
     padding: 3% 5%;
   }
-
   li{
     margin: 0% 25%;
   }

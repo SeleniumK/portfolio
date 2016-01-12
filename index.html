@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Selena Flannery | Developer & Designer</title>
+    <link href="vendor/normalize.css" rel="stylesheet"/>
     <link href="styles/base.css" type="text/css" rel="stylesheet"/>
+    <link href="vendor/icomoon/style.css" type="text/css" rel="stylesheet"/>
     <link href="styles/layout.css" type="text/css" rel="stylesheet"/>
     <link href="styles/modules.css" type="text/css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600|Droid+Serif:700italic|Bitter:400,700' rel='stylesheet' type='text/css'>
     <script id="template" type="text/x-handlebars-template">
       <article>
         <a href="{{link}}"><img src="{{picture}}" alt="{{title}}"/></a>
@@ -16,7 +19,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>SELENA FLANNERY</h1>
+        <h1>Selena Flannery</h1>
         <nav id="mainNav">
           <ul>
             <li class="tab" data-content="projects"><a href="#">Projects </a</li>
@@ -25,6 +28,10 @@
         </nav>
       </header>
       <section id="projects">
+        <!-- <aside>
+          <a href=""><div class="icons icon-twitter"></div></a>
+          <a href=""><div class="icons icon-github"></div></a>
+        </aside> -->
       </section>
       <section id="about">
         <div>
@@ -38,7 +45,10 @@
     </div>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <script src="projects.js"></script>
+    <script src="projectView.js"></script>
     <script src="script.js"></script>
+    <script>
+      Project.fetchAll();
+    </script>
   </body>
 </html>

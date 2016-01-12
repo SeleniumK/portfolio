@@ -5,3 +5,10 @@
 
 /*Projects
 ===================*/
+/*aside{
+  position: absolute;
+}
+aside a{
+  display: flex;
+  flex direction: column;
+}*/
