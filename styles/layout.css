@@ -1,3 +1,4 @@
+/*Projects*/
 .wrapper{
   position: relative;
   padding-bottom: 5%;
@@ -25,9 +26,7 @@ li{
   padding: 3% 5%;
 }
 
-
-@media only screen and (min-width: 700px),
-      (orientation: landscape) {
+@media only screen and (min-width: 600px){
 
   header{
     flex-direction: row;
@@ -51,15 +50,26 @@ li{
   img{
     max-width: 100%;
   }
-  ul{
+  #projects ul{
     flex-basis: 35%;
     justify-content: flex-end;
     padding: 3% 5%;
+    margin-top: 16%;
   }
   li{
-    margin: 0% 25%;
+    margin: 0% 5%;
   }
   .icon{
     margin: 0%
   }
+#about{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#about ul{
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
 }

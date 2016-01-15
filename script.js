@@ -1,6 +1,6 @@
 (function(module) {
   function Project(features) {
-    Object.key(features).forEach(function(e, index, keys){
+    Object.keys(features).forEach(function(e, index, keys){
       this[e] = features[e];
     }, this);
   }

@@ -12,8 +12,14 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600|Droid+Serif:700italic|Bitter:400,700' rel='stylesheet' type='text/css'>
     <script id="template" type="text/x-handlebars-template">
       <article>
-        <a href="#openmodal"><img src="{{picture}}" alt="{{title}}"/></a>
+        <a href="#{{id}}"><img src="{{picture}}" alt="{{title}}"/></a>
       </article>
+      <div id={{id}} class="modalDialog">
+        <div>
+          <a href="#close" title="Close" class="close">X</a>
+          <iframe src="{{link}}"></iframe>
+      </div>
+    </div>
     </script>
   </head>
   <body>
@@ -24,8 +30,8 @@
           <ul>
             <li class="tab" data-content="projects"><a href="#">Projects </a</li>
             <li class="tab" data-content="about"><a href="#">About</a></li>
-            <li class="icon icon-twitter"><a href=""></a> </li>
-            <li class="icon icon-github"><a href=""></a> </li>
+            <li><a href="https://twitter.com/SelenaFlannery" class="icon icon-twitter"></a> </li>
+            <li><a href="https://github.com/SeleniumK" class="icon icon-github"></a> </li>
           </ul>
         </nav>
       </header>
@@ -33,9 +39,12 @@
       </section>
       <section id="about">
         <div>
-          <p>
-            Some stuff goes here
-          </p>
+          <h4>Skills</h4>
+          <ul>
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+            <li>Responsive Design</li>
+          </ul>
         </div>
       </section>
       <footer>

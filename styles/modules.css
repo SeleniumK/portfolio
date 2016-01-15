@@ -1,14 +1,52 @@
-
-
-/*NavBar
-==============*/
-
-/*Projects
-===================*/
-/*aside{
-  position: absolute;
+.modalDialog {
+	position: fixed;
+	opacity:0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
 }
-aside a{
-  display: flex;
-  flex direction: column;
-}*/
+
+@media only screen and (min-width: 700px){
+  .modalDialog:target{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modalDialog div {
+    width: 95%;
+    height: 95%;
+    position: relative;
+    margin: auto;
+    background: white;
+  }
+
+  iframe{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .close{
+    position: absolute;
+    color: white;
+    background-color: #5A1B9B;
+    text-align: center;
+    left: 98%;
+    bottom: 97%;
+    width: 4%;
+    -webkit-border-radius: 12px;
+	  -moz-border-radius: 12px;
+    border-radius: 12px;
+  }
+
+  .close:hover{
+    background-color: #F8EAB7;
+  }
+}
