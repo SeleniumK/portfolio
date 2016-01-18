@@ -3,7 +3,7 @@
     "id" : "tictactoe",
     "title" : "Tic Tac Toe",
     "picture" : "img/tictactoe.png",
-    "link" : "tictack/index.html"
+    "link" : "tictack/index.html",
   },
   {
     "id" : "something",

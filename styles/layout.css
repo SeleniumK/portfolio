@@ -1,29 +1,35 @@
-/*Projects*/
+/*Sitewide*/
 .wrapper{
   position: relative;
+  margin-top: 2%;
   padding-bottom: 5%;
 }
-header, section, article, ul{
+
+ ul, section, article{
   display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
-header, ul{
-  margin-top: 5%;
+/*Masthead*/
+h1{
+  margin-bottom: 3%;
+  padding-top: 3%;
+}
+
+ul{
+  margin: 0 20% 3% 20%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*Projects*/
+section, article{
+  flex-direction: column;
+  justify-content: center;
 }
 
 article, img{
-  max-width: 80%;
+  width: 80%;
   margin: auto;
-}
-ul{
-  margin: 5%;
-  flex-direction: row;
-}
-
-li{
-  padding: 3% 5%;
 }
 
 @media only screen and (min-width: 600px){
@@ -44,32 +50,14 @@ li{
   article{
     max-width: 33%;
   }
-  a{
-    padding: 0%;
-  }
+
   img{
     max-width: 100%;
   }
-  #projects ul{
-    flex-basis: 35%;
-    justify-content: flex-end;
-    padding: 3% 5%;
-    margin-top: 16%;
+
+  #about ul{
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
   }
-  li{
-    margin: 0% 5%;
-  }
-  .icon{
-    margin: 0%
-  }
-#about{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-#about ul{
-  flex-direction: column;
-  width: 100%;
-  margin: auto;
-}
 }
