@@ -1,0 +1,63 @@
+/*Sitewide*/
+.wrapper{
+  position: relative;
+  margin-top: 2%;
+  padding-bottom: 5%;
+}
+
+ ul, section, article{
+  display: flex;
+}
+
+/*Masthead*/
+h1{
+  margin-bottom: 3%;
+  padding-top: 3%;
+}
+
+ul{
+  margin: 0 20% 3% 20%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*Projects*/
+section, article{
+  flex-direction: column;
+  justify-content: center;
+}
+
+article, img{
+  width: 80%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 600px){
+
+  header{
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5%;
+  }
+
+  section{
+    margin: 5% 12%;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  article{
+    max-width: 33%;
+  }
+
+  img{
+    max-width: 100%;
+  }
+
+  #about ul{
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
+}
