@@ -1,11 +1,27 @@
-(function(module){
-  var aboutPage = {};
+(function(module) {
+  var repos = {};
 
-  aboutPage.index = function(){
-    $('#articles').hide();
-    $('#about').show();
-  }
+  repos.all = [];
 
-  module.aboutPage = aboutPage;
+  repos.requestRepos = function(callback) {
+    var qs = '?per_page=100&sort=updated';
 
-}(window));
+    $.ajax({
+        url: 'https://api.github.com/users/SeleniumK/repos' + qs,
+        type: 'GET',
+        headers: {'Authorization': 'token ' + githubToken},
+        success: function(data, message, xhr){
+          repos.all = data;
+        }
+      })
+    .done(callback);
+  };
+
+  repos.with = function(attr) {
+    return repos.all.filter(function(repo) {
+      return repo[attr];
+    });
+  };
+
+  module.repos = repos;
+})(window);

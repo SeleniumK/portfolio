@@ -29,6 +29,7 @@ section, article{
 
 article, img{
   width: 80%;
+  height: 100%;
   margin: auto;
 }
 
@@ -52,7 +53,9 @@ article, img{
   }
 
   img{
-    max-width: 100%;
+    width: 100%;
+    height: 183.636px;
+    overflow: hidden;
   }
 
   #about ul{

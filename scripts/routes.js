@@ -1,13 +1,7 @@
 page.base('/');
-page('/', index);
-page('/about', about);
+page('', projectView.index);
+page('about', aboutController.index);
 
-page();
-
-function index(){
-  projectView.index();
-}
-
-function about(){
-  aboutPage.index();
-}
+page({
+  hashbang: true
+});

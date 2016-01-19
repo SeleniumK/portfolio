@@ -11,7 +11,6 @@
   projectView.index = function(){
     $('#about').hide();
     $('#projects').show();
-
     Project.fetchAll();
   }
 

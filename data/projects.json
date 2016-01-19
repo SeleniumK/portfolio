@@ -6,15 +6,15 @@
     "link" : ""
   },
   {
-    "id" : "something",
-    "title" : "Tic Tac Toe",
-    "picture" : "img/tictactoe.png",
+    "id" : "trivia",
+    "title" : "Trivia Crossroads",
+    "picture" : "img/trivia.png",
     "link" : ""
   },
   {
-    "id" : "else",
-    "title" : "Tic Tac Toe",
-    "picture" : "img/tictactoe.png",
+    "id" : "jellyfish",
+    "title" : "Tales of Democra-Sea",
+    "picture" : "img/jellyfish.png",
     "link" : ""
   },
   {
