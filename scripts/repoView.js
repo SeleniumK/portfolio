@@ -1,21 +1,29 @@
 (function(module) {
+  var $g = $('#githubProjects');
+  var $aTemp = $('#about-template');
   var repoView = {};
-  var $githubList = $('#githubProjects');
 
-  var ui = function() {
-    $githubList.empty();
-  };
+  // var ui = function() {
+  //   $g.empty();
+  // };
 
-  var render = function(repos) {
-    var aboutTemplate = Handlebars.compile($('#about-template').text());
-    return aboutTemplate(repos);
-  };
+  // var render = function(repos) {
+  //   var aboutTemplate = Handlebars.compile($('#about-template').text());
+  //   return aboutTemplate(repos);
+  // };
 
   repoView.index = function(){
-    ui();
-    $githubList.append(
-      repos.with('stargazers_count').map(render)
-  )};
+    $g.empty();
+    repos.all.forEach(function(r){
+      $g.append(toHtml(r, $aTemp));
+    });
+    // $g.append(
+
+        // repos.with('stargazers_count').map(function(repo){
+      //   console.log(repo);
+      //   toHtml(repo, $aTemp);
+      // })
+  };
 
   module.repoView = repoView;
 })(window);

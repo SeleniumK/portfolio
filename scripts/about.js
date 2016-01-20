@@ -4,7 +4,7 @@
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    var qs = '?per_page=100&sort=updated';
+    var qs = '?per_page=5&sort=updated';
 
     $.ajax({
         url: 'https://api.github.com/users/SeleniumK/repos' + qs,

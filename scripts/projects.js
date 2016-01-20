@@ -7,11 +7,11 @@
 
   Project.all = [];
 
-  Project.prototype.toHtml = function(a){
-    var source = $('#template').html();
-    var template = Handlebars.compile(source);
-    return template(a);
-  };
+  // Project.prototype.toHtml = function(a){
+  //   var source = $('#template').html();
+  //   var template = Handlebars.compile(source);
+  //   return template(a);
+  // };
 
   Project.loadAll = function(rawData){
     Project.all = rawData.map(function(proj) {
@@ -52,3 +52,9 @@
 
   module.Project = Project;
 })(window);
+
+function toHtml(data, dom){
+  var source = dom.html();
+  var template = Handlebars.compile(source);
+  return template(data);
+}

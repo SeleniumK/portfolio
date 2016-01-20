@@ -1,18 +1,16 @@
 (function(module){
+  var $p = $('#projects');
+  var $pTemp = $('#project-template');
   var projectView = {};
 
   projectView.initProjects = function(){
-    $('#projects').empty();
+    $p.empty();
     Project.all.forEach(function(a){
-      $('#projects').append(a.toHtml(a));
+      // $p.append(a.toHtml(a));
+      $p.append(toHtml(a, $pTemp));
     });
   };
 
-  projectView.index = function(){
-    $('#about').hide();
-    $('#projects').show();
-    Project.fetchAll();
-  }
 
   module.projectView = projectView;
 }(window));

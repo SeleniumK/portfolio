@@ -1,6 +1,6 @@
 page.base('/');
-page('', projectView.index);
-page('about', aboutController.index);
+page('', pageController.projectIndex);
+page('about', pageController.aboutIndex);
 
 page({
   hashbang: true
