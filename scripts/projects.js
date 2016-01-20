@@ -7,12 +7,6 @@
 
   Project.all = [];
 
-  // Project.prototype.toHtml = function(a){
-  //   var source = $('#template').html();
-  //   var template = Handlebars.compile(source);
-  //   return template(a);
-  // };
-
   Project.loadAll = function(rawData){
     Project.all = rawData.map(function(proj) {
       return new Project(proj);
@@ -23,7 +17,7 @@
     $.getJSON('data/projects.json', function(rawData){
       Project.loadAll(rawData);
       localStorage.rawData = JSON.stringify(rawData);
-      projectView.initProjects();
+      pageView.initProjects();
     });
   };
 
@@ -34,7 +28,7 @@
       Project.getUpdates();
     }else {
       Project.loadAll(JSON.parse(localStorage.rawData));
-      projectView.initProjects();
+      pageView.initProjects();
     }
   };
 
@@ -52,9 +46,3 @@
 
   module.Project = Project;
 })(window);
-
-function toHtml(data, dom){
-  var source = dom.html();
-  var template = Handlebars.compile(source);
-  return template(data);
-}
