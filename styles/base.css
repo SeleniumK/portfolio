@@ -1,0 +1,50 @@
+*{
+  font-size: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  background-color: #4D29B2;
+  text-align: center;
+}
+
+.wrapper{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.template{
+  display: none;
+}
+img{
+  max-width: 100%;
+}
+
+img:hover{
+  opacity: .4;
+}
+
+/*TEXT STYLES
+=======================================*/
+h1{
+  color: #4D29B2;
+  text-align: center;
+  font-family: "Bitter", serif;
+  font-size: 2.3em;
+}
+
+li{
+  list-style: none;
+  color: #4D29B2;
+  font-family: "Bitter", serif;
+  font-size: 1.1em;
+}
+
+p{
+  font-family: "Raleway", sans-serif;
+}
+/*LINK STYLES
+=======================================*/
+a, a:link, a:active{
+  text-decoration: none;
+}

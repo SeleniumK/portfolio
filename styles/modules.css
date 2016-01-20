@@ -1,0 +1,48 @@
+.modalDialog {
+	position: fixed;
+	display: none;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 9999;
+	/*-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;*/
+	pointer-events: none;
+}
+
+@media only screen and (min-width: 700px){
+  .modalDialog:target{
+    /*opacity: 1;*/
+		display: block;
+    pointer-events: auto;
+  }
+
+  .modalDialog > div {
+    width: 85%;
+    height: 85%;
+    position: relative;
+    margin: 5% auto;
+    background: white;
+  }
+
+  .close{
+    position: absolute;
+    color: white;
+    background-color: #5A1B9B;
+    text-align: center;
+    left: 98%;
+    bottom: 97%;
+    width: 4%;
+    -webkit-border-radius: 12px;
+	  -moz-border-radius: 12px;
+    border-radius: 12px;
+    z-index: 99999;
+  }
+
+  .close:hover{
+    background-color: #F8EAB7;
+  }
+}
