@@ -1,10 +1,10 @@
 (function(module){
   var $p = $('#projects');
   var $a = $('#about');
-  var $g = $('#githubProjects');
+  var $r = $('#repos');
 
   var $pTemp = $('#project-template');
-  var $aTemp = $('#about-template');
+  var $rTemp = $('#repo-template');
 
   var render = function(data, dom){
     var source = dom.html();
@@ -12,17 +12,9 @@
     return template(data);
   };
 
-  var appendProjects = function(){
-    $p.empty();
-    Project.all.forEach(function(a){
-      $p.append(render(a, $pTemp));
-    });
-  };
-
-  var appendRepos = function(){
-    $g.empty();
-    repos.all.forEach(function(r){
-      $g.append(render(r, $aTemp));
+  var appendData = function(section, appendTo, template){
+    section.all.forEach(function(a){
+      appendTo.append(render(a, template));
     });
   };
 
@@ -30,14 +22,16 @@
 
   pageView.initProjects = function(){
     $a.hide();
+    $p.empty();
     $p.show();
-    appendProjects();
+    appendData(Project, $p, $pTemp);
   };
 
   pageView.initAbout = function(){
     $p.hide();
+    $r.empty();
     $a.show();
-    appendRepos();
+    appendData(repos, $r, $rTemp);
   };
 
   module.pageView = pageView;
