@@ -1,6 +1,15 @@
 page.base('/');
-page('', pageController.projectIndex);
-page('about', pageController.aboutIndex);
+
+page('', index);
+page('about', about);
+
+function index(){
+  pageController.index(Project);
+};
+
+function about(){
+  pageController.index(Repo);
+};
 
 page({
   hashbang: true
