@@ -1,12 +1,8 @@
 (function(module) {
   var pageController = {};
 
-  pageController.projectIndex = function(){
-      Project.fetchAll();
-    };
-
-  pageController.aboutIndex = function() {
-    repos.requestRepos(pageView.initAbout);
+  pageController.index = function(obj){
+    fetch(obj, pageView.initPage);
   };
 
   module.pageController = pageController;

@@ -1,38 +1,27 @@
 (function(module){
-  var $p = $('#projects');
-  var $a = $('#about');
-  var $r = $('#repos');
 
-  var $pTemp = $('#project-template');
-  var $rTemp = $('#repo-template');
-
-  var render = function(data, dom){
-    var source = dom.html();
+  var render = function(data, domTemp){
+    var source = domTemp.html();
     var template = Handlebars.compile(source);
     return template(data);
   };
 
-  var appendData = function(section, appendTo, template){
-    section.all.forEach(function(a){
-      appendTo.append(render(a, template));
+  var appendData = function(obj){
+    obj.$section.empty();
+    obj.all.forEach(function(a){
+      var domEl = obj.$section;
+      domEl.append(render(a, obj.$template));
     });
   };
 
   var pageView = {};
 
-  pageView.initProjects = function(){
-    $a.hide();
-    $p.empty();
-    $p.show();
-    appendData(Project, $p, $pTemp);
-  };
-
-  pageView.initAbout = function(){
-    $p.hide();
-    $r.empty();
-    $a.show();
-    appendData(repos, $r, $rTemp);
-  };
+  pageView.initPage = function(obj){
+    var $page = obj.$tabPage;
+    $page.siblings("section").hide()
+    $page.show();
+    appendData(obj);
+  }
 
   module.pageView = pageView;
 }(window));
